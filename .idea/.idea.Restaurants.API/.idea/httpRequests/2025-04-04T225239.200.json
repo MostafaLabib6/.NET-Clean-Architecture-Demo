@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2025-04-05",
+    "temperatureC": -20,
+    "temperatureF": -3,
+    "summary": "Chilly"
+  },
+  {
+    "date": "2025-04-06",
+    "temperatureC": 13,
+    "temperatureF": 55,
+    "summary": "Hot"
+  },
+  {
+    "date": "2025-04-07",
+    "temperatureC": 29,
+    "temperatureF": 84,
+    "summary": "Mild"
+  },
+  {
+    "date": "2025-04-08",
+    "temperatureC": 3,
+    "temperatureF": 37,
+    "summary": "Sweltering"
+  },
+  {
+    "date": "2025-04-09",
+    "temperatureC": 51,
+    "temperatureF": 123,
+    "summary": "Cool"
+  }
+]

@@ -1,0 +1,17 @@
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\bin\Debug\net8.0\Restaurants.Infrastructure.deps.json
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\bin\Debug\net8.0\Restaurants.Infrastructure.dll
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\bin\Debug\net8.0\Restaurants.Infrastructure.pdb
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\bin\Debug\net8.0\Restaurants.Application.dll
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\bin\Debug\net8.0\Restaurants.Domain.dll
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\bin\Debug\net8.0\Restaurants.Application.pdb
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\bin\Debug\net8.0\Restaurants.Domain.pdb
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\obj\Debug\net8.0\Restaurants.Infrastructure.csproj.AssemblyReference.cache
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\obj\Debug\net8.0\Restaurants.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\obj\Debug\net8.0\Restaurants.Infrastructure.AssemblyInfoInputs.cache
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\obj\Debug\net8.0\Restaurants.Infrastructure.AssemblyInfo.cs
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\obj\Debug\net8.0\Restaurants.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\obj\Debug\net8.0\Restaurants.Infrastructure.csproj.CopyComplete
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\obj\Debug\net8.0\Restaurants.Infrastructure.dll
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\obj\Debug\net8.0\refint\Restaurants.Infrastructure.dll
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\obj\Debug\net8.0\Restaurants.Infrastructure.pdb
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Infrastructure\obj\Debug\net8.0\ref\Restaurants.Infrastructure.dll

@@ -1,0 +1,15 @@
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Application\bin\Debug\net8.0\Restaurants.Application.deps.json
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Application\bin\Debug\net8.0\Restaurants.Application.dll
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Application\bin\Debug\net8.0\Restaurants.Application.pdb
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Application\bin\Debug\net8.0\Restaurants.Domain.dll
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Application\bin\Debug\net8.0\Restaurants.Domain.pdb
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Application\obj\Debug\net8.0\Restaurants.Application.csproj.AssemblyReference.cache
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Application\obj\Debug\net8.0\Restaurants.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Application\obj\Debug\net8.0\Restaurants.Application.AssemblyInfoInputs.cache
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Application\obj\Debug\net8.0\Restaurants.Application.AssemblyInfo.cs
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Application\obj\Debug\net8.0\Restaurants.Application.csproj.CoreCompileInputs.cache
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Application\obj\Debug\net8.0\Restaurants.Application.csproj.CopyComplete
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Application\obj\Debug\net8.0\Restaurants.Application.dll
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Application\obj\Debug\net8.0\refint\Restaurants.Application.dll
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Application\obj\Debug\net8.0\Restaurants.Application.pdb
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Application\obj\Debug\net8.0\ref\Restaurants.Application.dll

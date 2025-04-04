@@ -1,0 +1,14 @@
+@Restaurants.API_HostAddress = https://localhost:44378
+
+GET https://localhost:44378/weatherforecast/
+Accept: application/json
+
+###
+POST https://localhost:44378/WeatherForecast/generate?numberOfGenerations=3
+Accept: application/json
+Content-Type: application/json
+
+{
+    "minTempratureC": 3,
+    "maxTempratureC": 5 
+}
