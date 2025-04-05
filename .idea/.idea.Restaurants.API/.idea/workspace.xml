@@ -9,23 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf182468-241b-496a-b5c3-f7d07d38a55f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Restaurants.Infrastructure/Restaurants.Infrastructure.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Restaurants.Infrastructure/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.GlobalUsings.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Restaurants.Infrastructure/obj/Debug/net8.0/Restaurants.Infrastructure.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Restaurants.Infrastructure/obj/Restaurants.Infrastructure.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Restaurants.Infrastructure/obj/Restaurants.Infrastructure.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Restaurants.Infrastructure/obj/Restaurants.Infrastructure.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Restaurants.Infrastructure/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Restaurants.Infrastructure/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Restaurants.Infrastructure/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Restaurants.Infrastructure/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Restaurants.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
-    </list>
+    <list default="true" id="cf182468-241b-496a-b5c3-f7d07d38a55f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,16 +21,43 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "state": "OPEN",
+      "assignee": "MostafaLabib6",
+      "author": "MostafaLabib6"
+    }
+  ],
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MostafaLabib6",
+    "author": "MostafaLabib6"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MostafaLabib6/.NET-Clean-Architecture-Demo.git",
+    "accountId": "f52e2a48-65fe-4545-a882-c09ee56bfafb"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/294078ecfce6fdb942ecfee089f09717de7a6fcfe5efd9fdb6f4f93c0fb4813/ActionMethodExecutor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/74b0e731b386250ea87a3def41de845ec4788a738dbdb3ff4c4e2e69f3fd/HttpResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/96a4cc66aa48dda8a9d8be8febec4a769fc143f7a86dd53ecdebfb9c3177d/ControllerBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f128dae15ab34ce7f3394ecb1e2167e06f84d30f53fd1c2deedc925337e965/HttpContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Restaurants.Domain/Entities/Address.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Restaurants.Domain/Entities/Dish.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Restaurants.Domain/Entities/Restaurant.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
   <component name="KubernetesApiProvider"><![CDATA[{
   "isMigrated": true
 }]]></component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 1
 }]]></component>
@@ -150,13 +161,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1743797293860</updated>
-      <workItem from="1743797296657" duration="4889000" />
+      <workItem from="1743797296657" duration="5565000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

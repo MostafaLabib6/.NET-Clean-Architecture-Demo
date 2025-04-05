@@ -9,3 +9,4 @@ D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Domain\obj\Debug\net8.0\R
 D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Domain\obj\Debug\net8.0\refint\Restaurants.Domain.dll
 D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Domain\obj\Debug\net8.0\Restaurants.Domain.pdb
 D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Domain\obj\Debug\net8.0\ref\Restaurants.Domain.dll
+D:\Courses\CleanArchCourse\Restaurants.API\Restaurants.Domain\obj\Debug\net8.0\Restaurants.Domain.sourcelink.json

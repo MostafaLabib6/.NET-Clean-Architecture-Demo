@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "tQcJwjAiugG1Ez76K7YlxnPO0wO01gD+v5gUpvp9RtAHg+eLK1Ig+MjK4h4KXs7eGwuD+GrVkiS/PpIeJoJKCQ==",
+  "dgSpecHash": "ezR9Oe6C0ls=",
   "success": true,
   "projectFilePath": "D:\\Courses\\CleanArchCourse\\Restaurants.API\\Restaurants.Application\\Restaurants.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mostafal\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.14\\microsoft.netcore.app.ref.8.0.14.nupkg.sha512",
+    "C:\\Users\\mostafal\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.14\\microsoft.windowsdesktop.app.ref.8.0.14.nupkg.sha512",
+    "C:\\Users\\mostafal\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.14\\microsoft.aspnetcore.app.ref.8.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

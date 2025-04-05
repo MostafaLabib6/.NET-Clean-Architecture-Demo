@@ -16,7 +16,10 @@
       },
       "Restaurants.Domain/1.0.0": {
         "runtime": {
-          "Restaurants.Domain.dll": {}
+          "Restaurants.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

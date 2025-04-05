@@ -12,3 +12,5 @@ Content-Type: application/json
     "minTempratureC": 3,
     "maxTempratureC": 5 
 }
+###
+GET https://localhost:44378/api/Test
