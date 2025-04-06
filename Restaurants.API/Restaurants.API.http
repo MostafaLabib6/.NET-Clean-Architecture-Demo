@@ -4,7 +4,7 @@ GET https://localhost:44378/weatherforecast/
 Accept: application/json
 
 ###
-POST https://localhost:44378/WeatherForecast/generate?numberOfGenerations=3
+POST https://localhost:44378/rest/generate?numberOfGenerations=3
 Accept: application/json
 Content-Type: application/json
 
@@ -14,3 +14,5 @@ Content-Type: application/json
 }
 ###
 GET https://localhost:44378/api/Test
+###
+GET https://localhost:44378/api/restaurants
