@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Restaurants.Domain.Entities;
-using Restaurants.Infrastructure.Persistance;
+using Restaurants.Infrastructure.Persistence;
 
 namespace Restaurants.Infrastructure.Seeder;
 
@@ -9,7 +9,7 @@ public interface IRestaurantDataSeeder
     Task SeedAsync();
 }
 
-internal class RestaurantDataSeeder(RestaurantDb context) : IRestaurantDataSeeder
+internal class RestaurantDataSeeder(RestaurantDbContext context) : IRestaurantDataSeeder
 {
     public async Task SeedAsync()
     {

@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Restaurants.Infrastructure.Persistance;
+using Restaurants.Infrastructure.Persistence;
 
 #nullable disable
 
 namespace Restaurants.Infrastructure.Migrations
 {
-    [DbContext(typeof(RestaurantDb))]
+    [DbContext(typeof(RestaurantDbContext))]
     [Migration("20250405194742_add Address Configuration")]
     partial class addAddressConfiguration
     {
