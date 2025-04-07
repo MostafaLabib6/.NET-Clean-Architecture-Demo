@@ -2,8 +2,8 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Restaurants.Domain.Repositories;
+using Restaurants.Infrastructure.Persistance.Repositories;
 using Restaurants.Infrastructure.Persistence;
-using Restaurants.Infrastructure.Persistence.Repositories;
 using Restaurants.Infrastructure.Seeder;
 
 namespace Restaurants.Infrastructure.Extensions;
