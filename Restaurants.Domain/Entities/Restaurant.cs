@@ -12,6 +12,6 @@ public class Restaurant
     public string Email { get; set; } = default!;
     
     public Address? Address { get; set; }
-    public List<Dish> Dishes { get; set; } = new();
+    public List<Dish> Dishes { get; set; } = [];
     
 }
