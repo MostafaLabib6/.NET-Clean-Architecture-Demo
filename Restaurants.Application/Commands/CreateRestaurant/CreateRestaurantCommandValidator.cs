@@ -1,16 +1,17 @@
 ﻿using FluentValidation;
+using Restaurants.Application.Commands.CreateRestaurant;
 using Restaurants.Application.Restaurants;
 
 namespace Restaurants.Application.Validators;
 
-public class CreateRestaurantDtoValidator:AbstractValidator<CreateRestaurantDto>
+public class CreateRestaurantCommandValidator:AbstractValidator<CreateRestaurantCommand>
 {
     private List<string> validCategories =
     [
         "Fast Food", "Casual", "Fast Casual", "Contemporary Casual", "Fine Dining", "Cafes and Coffee Shops", "Specialty Drinks", "Buffet",
         "Food Trucks", "Concession Stands", "Pop-Ups", "Ghost Restaurants"
     ];
-    public CreateRestaurantDtoValidator()
+    public CreateRestaurantCommandValidator()
     {
         RuleFor(x => x.Name)
             .Length(5,100).NotEmpty();

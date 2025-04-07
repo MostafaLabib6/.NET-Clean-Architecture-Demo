@@ -1,4 +1,5 @@
 ﻿using Mapster;
+using Restaurants.Application.Commands.CreateRestaurant;
 using Restaurants.Application.Dishes;
 using Restaurants.Application.Restaurants;
 using Restaurants.Domain.Entities;
@@ -23,7 +24,7 @@ public class Mapper : IRegister
         //     .Map(dest => dest.Address.Street, src => src.Street)
         //     .Map(dest => dest.Address.PostalCode, src => src.PostalCode);
 
-        config.NewConfig<CreateRestaurantDto, Restaurant>()
+        config.NewConfig<CreateRestaurantCommand, Restaurant>()
             .Map(dest => dest.Address, src => new Address()
             {
                 City = src.City,
