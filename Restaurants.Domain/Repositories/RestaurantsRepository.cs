@@ -4,7 +4,10 @@ namespace Restaurants.Domain.Repositories;
 
 public interface IRestaurantsRepository
 {
-    public Task<IEnumerable<Restaurant>> GetAllAsync();
-    public Task<Restaurant?> GetByIdAsync(int id);
-    public Task<int> AddRestaurant(Restaurant restaurantEntity);
+    Task<IEnumerable<Restaurant>> GetAllAsync();
+    Task<Restaurant?> GetByIdAsync(int id);
+    Task<int> AddRestaurant(Restaurant restaurant);
+    Task DeleteRestaurant(Restaurant restaurant);
+    Task UpdateRestaurant(int requestId, string requestName, string requestDescription, string requestCategory, bool requestHasDelivery, string requestPhoneNumber, string requestEmail, string? requestCity, string? requestStreet, string? requestPostalCode);
+    Task SaveChangesAsync();
 }
