@@ -1,6 +1,7 @@
 ﻿using Mapster;
 using Restaurants.Application.Commands.CreateRestaurant;
 using Restaurants.Application.Dishes;
+using Restaurants.Application.Dishes.Commands.CreateRestaurantDish;
 using Restaurants.Application.Restaurants;
 using Restaurants.Domain.Entities;
 
@@ -31,5 +32,7 @@ public class Mapper : IRegister
                 Street = src.Street,
                 PostalCode = src.PostalCode
             });
+
+        config.NewConfig<CreateRestaurantDishCommand, Dish>();
     }
 }
