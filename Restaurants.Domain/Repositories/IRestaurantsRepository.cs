@@ -8,6 +8,10 @@ public interface IRestaurantsRepository
     Task<Restaurant?> GetByIdAsync(int id);
     Task<int> AddRestaurant(Restaurant restaurant);
     Task DeleteRestaurant(Restaurant restaurant);
-    Task UpdateRestaurant(int requestId, string requestName, string requestDescription, string requestCategory, bool requestHasDelivery, string requestPhoneNumber, string requestEmail, string? requestCity, string? requestStreet, string? requestPostalCode);
+
+    Task UpdateRestaurant(int requestId, string requestName, string requestDescription, string requestCategory, bool requestHasDelivery,
+        string requestPhoneNumber, string requestEmail, string? requestCity, string? requestStreet, string? requestPostalCode);
+
     Task SaveChangesAsync();
+    Task<bool> RestaurantExists(int id);
 }
