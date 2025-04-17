@@ -26,7 +26,7 @@ public class Mapper : IRegister
         //     .Map(dest => dest.Address.PostalCode, src => src.PostalCode);
 
         config.NewConfig<CreateRestaurantCommand, Restaurant>()
-            .Map(dest => dest.Address, src => new Address()
+            .Map(dest => dest.Address, src => new Address
             {
                 City = src.City,
                 Street = src.Street,

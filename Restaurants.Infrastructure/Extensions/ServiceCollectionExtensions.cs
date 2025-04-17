@@ -1,8 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Restaurants.Domain.Entities;
+using Restaurants.Domain.Interfaces;
 using Restaurants.Domain.Repositories;
+using Restaurants.Infrastructure.Authorization;
+using Restaurants.Infrastructure.Authorization.Constants;
+using Restaurants.Infrastructure.Authorization.Requirement;
+using Restaurants.Infrastructure.Authorization.Services;
 using Restaurants.Infrastructure.Persistance.Repositories;
 using Restaurants.Infrastructure.Persistence;
 using Restaurants.Infrastructure.Seeder;
@@ -20,10 +28,21 @@ public static class ServiceCollectionExtensions
 
         services.AddScoped<IRestaurantsRepository, RestaurantsRepository>();
         services.AddScoped<IDishesRepository, DishesRepository>();
+        services.AddScoped<IAuthorizationHandler, MinimumAgeRequirementHandler>();
+        services.AddScoped<IRestaurantAuthorizationService, RestaurantAuthorizationService>();
+
+        services.AddAuthorization(options =>
+        {
+            options.AddPolicy(PolicyNames.HasNationality, policy => policy.RequireClaim(nameof(RestaurantClaimTypes.Nationality), "Egyptian"));
+            options.AddPolicy(PolicyNames.AtLeast20, policy =>
+                policy.Requirements.Add(new MinimumAgeRequirement(20)));
+        });
 
         services.AddIdentityApiEndpoints<User>()
+            .AddRoles<IdentityRole>()
+            .AddClaimsPrincipalFactory<RestaurantUserClaimsPrincipalFactory>()
             .AddEntityFrameworkStores<RestaurantDbContext>();
-        
+
         return services;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Restaurants.Application.Commands.CreateRestaurant;
 using Restaurants.Application.Commands.DeleteRestaurant;
@@ -6,11 +7,14 @@ using Restaurants.Application.Commands.UpdateRestaurant;
 using Restaurants.Application.Queries.GetAllRestaurants;
 using Restaurants.Application.Queries.GetrestaurantsById;
 using Restaurants.Application.Restaurants;
+using Restaurants.Domain.Constants;
+using Restaurants.Infrastructure.Authorization.Constants;
 
 namespace Restaurants.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class RestaurantsController(IMediator mediator) : ControllerBase
 {
     [HttpGet]
@@ -23,6 +27,7 @@ public class RestaurantsController(IMediator mediator) : ControllerBase
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(string))]
+    [Authorize(Policy = PolicyNames.HasNationality)]
     public async Task<ActionResult<RestaurantDto>> GetById(int id)
     {
         var restaurant = await mediator.Send(new GetRestaurantsByIdQuery(id));
@@ -39,6 +44,7 @@ public class RestaurantsController(IMediator mediator) : ControllerBase
     [HttpDelete("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(string))]
+    [Authorize(Policy = PolicyNames.AtLeast20)]
     public async Task<IActionResult> DeleteRestaurant(int id)
     {
         await mediator.Send(new DeleteRestaurantCommand(id));

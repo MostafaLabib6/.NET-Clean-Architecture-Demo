@@ -1,6 +1,4 @@
-﻿using Restaurants.Application.Dishes;
-
-namespace Restaurants.Application.Restaurants;
+﻿namespace Restaurants.Application.Restaurants;
 
 public record RestaurantDto
 {

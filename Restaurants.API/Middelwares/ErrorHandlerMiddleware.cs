@@ -14,7 +14,7 @@ public class ErrorHandlerMiddleware(ILogger<ErrorHandlerMiddleware> logger) : IM
         {
             logger.LogError(ex, ex.Message);
             context.Response.StatusCode = StatusCodes.Status404NotFound;
-            await context.Response.WriteAsJsonAsync(new { Message = ex.Message });
+            await context.Response.WriteAsJsonAsync(new { ex.Message });
         }
         catch (Exception ex)
         {
@@ -22,5 +22,14 @@ public class ErrorHandlerMiddleware(ILogger<ErrorHandlerMiddleware> logger) : IM
             context.Response.StatusCode = StatusCodes.Status500InternalServerError;
             await context.Response.WriteAsJsonAsync(new { Message = "An error occurred while processing your request." });
         }
+    }
+}
+
+public class TestingHeaderMiddleware : IMiddleware
+{
+    public async Task InvokeAsync(HttpContext context, RequestDelegate next)
+    {
+        var request = context.Request;
+        await next(context);
     }
 }

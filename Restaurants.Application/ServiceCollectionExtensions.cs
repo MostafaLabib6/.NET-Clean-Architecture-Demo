@@ -3,6 +3,7 @@ using FluentValidation.AspNetCore;
 using Mapster;
 using MapsterMapper;
 using Microsoft.Extensions.DependencyInjection;
+using Restaurants.Application.Users;
 
 namespace Restaurants.Application;
 
@@ -17,8 +18,11 @@ public static class ServiceCollectionExtensions
         // services.AddScoped<IRestaurantsService, RestaurantsService>();
 
         services.AddScoped<IMapper, Mapper>();
+        services.AddScoped<IUserContext, UserContext>();
         services.AddValidatorsFromAssembly(typeof(ServiceCollectionExtensions).Assembly).AddFluentValidationAutoValidation();
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(ServiceCollectionExtensions).Assembly));
+
+        services.AddHttpContextAccessor();
         return services;
     }
 }

@@ -1,5 +1,7 @@
+using Restaurants.API.Extensions;
 using Restaurants.API.Middlewares;
 using Restaurants.Application;
+using Restaurants.Domain.Entities;
 using Restaurants.Infrastructure.Extensions;
 using Restaurants.Infrastructure.Seeder;
 using Serilog;
@@ -7,19 +9,10 @@ using Serilog;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-builder.Services.AddScoped<ErrorHandlerMiddleware>();
-builder.Services.AddScoped<RequestTimeLoggingMiddleware>();
-
+builder.AddPresentation();
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 
-builder.Host.UseSerilog((context, cfg) => { cfg.ReadFrom.Configuration(context.Configuration); });
 
 var app = builder.Build();
 
@@ -38,7 +31,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.MapGroup("api/Identity")
+    .WithTags("Identity").MapIdentityApi<User>();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

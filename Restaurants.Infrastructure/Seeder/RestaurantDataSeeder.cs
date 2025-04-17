@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Restaurants.Domain.Constants;
 using Restaurants.Domain.Entities;
 using Restaurants.Infrastructure.Persistence;
 
@@ -17,7 +19,20 @@ internal class RestaurantDataSeeder(RestaurantDbContext context) : IRestaurantDa
         {
             var restaurants = GetRestaurants();
             context.Restaurants.AddRange(restaurants);
-            
+
+            await context.SaveChangesAsync();
+        }
+
+        if (!context.Roles.Any())
+        {
+            var roles = Enum.GetValues<RolesEnum>()
+                .Select(role => new IdentityRole()
+                {
+                    Name = role.ToString(),
+                    NormalizedName = role.ToString().ToUpper()
+                })
+                .ToList();;
+            context.Roles.AddRange(roles);
             await context.SaveChangesAsync();
         }
     }
@@ -38,21 +53,21 @@ internal class RestaurantDataSeeder(RestaurantDbContext context) : IRestaurantDa
                 PhoneNumber = "+44 20 1234 5678",
                 Dishes =
                 [
-                    new()
+                    new Dish
                     {
                         Name = "Nashville Hot Chicken",
                         Description = "Nashville Hot Chicken (10 pcs.)",
-                        Price = 10.30M,
+                        Price = 10.30M
                     },
 
-                    new()
+                    new Dish
                     {
                         Name = "Chicken Nuggets",
                         Description = "Chicken Nuggets (5 pcs.)",
-                        Price = 5.30M,
-                    },
+                        Price = 5.30M
+                    }
                 ],
-                Address = new()
+                Address = new Address
                 {
                     City = "London",
                     Street = "Cork St 5",
@@ -68,7 +83,7 @@ internal class RestaurantDataSeeder(RestaurantDbContext context) : IRestaurantDa
                 Email = "contact@mcdonald.com",
                 HasDelivery = true,
                 PhoneNumber = "+44 20 1234 5678",
-                Address = new Address()
+                Address = new Address
                 {
                     City = "London",
                     Street = "Boots 193",

@@ -6,7 +6,7 @@ using Serilog;
 
 namespace Restaurants.Application.Queries.GetAllRestaurants;
 
-public class GetAllRestaurantsQueryHandler(IRestaurantsRepository restaurantsRepository,ILogger logger)
+public class GetAllRestaurantsQueryHandler(IRestaurantsRepository restaurantsRepository, ILogger logger)
     : IRequestHandler<GetAllRestaurantsQuery, IEnumerable<RestaurantDto>>
 {
     public async Task<IEnumerable<RestaurantDto>> Handle(GetAllRestaurantsQuery request, CancellationToken cancellationToken)
