@@ -1,0 +1,7 @@
+﻿namespace Restaurants.Domain.Constants;
+
+public enum SortDirection
+{
+    ASC,
+    DESC
+}

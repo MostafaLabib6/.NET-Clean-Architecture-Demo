@@ -8,7 +8,7 @@ using Serilog;
 
 namespace Restaurants.Infrastructure.Authorization.Services;
 
-public class RestaurantAuthorizationService(ILogger logger, UserContext userContext) : IRestaurantAuthorizationService
+public class RestaurantAuthorizationService(ILogger logger, IUserContext userContext) : IRestaurantAuthorizationService
 {
     public Task<bool> IsUserAuthorized(Restaurant restaurant, ResourceOperation resourceOperation)
     {
