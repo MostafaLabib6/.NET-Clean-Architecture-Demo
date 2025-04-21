@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization.Policy;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.VisualStudio.TestPlatform.TestHost;
 using Restaurants.API.Controllers;
 using Restaurants.Application.Queries.GetAllRestaurants;
 using Xunit;

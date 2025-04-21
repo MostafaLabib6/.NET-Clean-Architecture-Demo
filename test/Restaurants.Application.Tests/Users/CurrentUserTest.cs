@@ -1,5 +1,4 @@
 ﻿using FluentAssertions;
-using JetBrains.Annotations;
 using Restaurants.Application.Users;
 using Restaurants.Domain.Constants;
 using Xunit;
@@ -10,7 +9,7 @@ namespace Restaurants.Application.Tests.Users;
 public class CurrentUserTest
 {
     [Theory]
-    [InlineData(nameof(RolesEnum.ADMIN))]
+	[InlineData(nameof(RolesEnum.ADMIN))]
     [InlineData(nameof(RolesEnum.USER))]
     //METHODNAME_SCENARIO_RESULT
     public void IsInRole_WithMatchingRole_ShouldBeTrue(string roleName)
