@@ -18,4 +18,6 @@ public interface IRestaurantsRepository
 
     Task SaveChangesAsync();
     Task<bool> RestaurantExists(int id);
+    
+    Task<int> GetNumberOfRestaurantsByOwnerId(string userId);
 }

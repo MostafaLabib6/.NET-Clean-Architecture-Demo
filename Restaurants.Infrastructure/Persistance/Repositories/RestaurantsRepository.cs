@@ -36,12 +36,12 @@ internal class RestaurantsRepository(RestaurantDbContext dbContext) : IRestauran
 
 
         var totalCount = await query.CountAsync();
-        var restaurants = await 
+        var restaurants = await
             query.Skip((page - 1) * pageSize).Take(pageSize).ToListAsync();
-        
+
         return (restaurants, totalCount);
     }
-    
+
     public async Task<Restaurant?> GetByIdAsync(int id)
     {
         return await dbContext.Restaurants.AsNoTracking().Include(x => x.Dishes).FirstOrDefaultAsync(x => x.Id == id);
@@ -74,5 +74,10 @@ internal class RestaurantsRepository(RestaurantDbContext dbContext) : IRestauran
     public async Task<bool> RestaurantExists(int id)
     {
         return await dbContext.Restaurants.AnyAsync(x => x.Id == id);
+    }
+
+    public async Task<int> GetNumberOfRestaurantsByOwnerId(string userId)
+    {
+        return await dbContext.Restaurants.CountAsync(x => x.OwnerId == userId);
     }
 }

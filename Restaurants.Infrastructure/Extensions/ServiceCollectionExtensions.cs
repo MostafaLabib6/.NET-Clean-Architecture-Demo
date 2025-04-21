@@ -30,12 +30,14 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IDishesRepository, DishesRepository>();
         services.AddScoped<IAuthorizationHandler, MinimumAgeRequirementHandler>();
         services.AddScoped<IRestaurantAuthorizationService, RestaurantAuthorizationService>();
+        services.AddScoped<IAuthorizationHandler, MultipleRestaurantCreatedRequirementHandler>();
 
         services.AddAuthorization(options =>
         {
             options.AddPolicy(PolicyNames.HasNationality, policy => policy.RequireClaim(nameof(RestaurantClaimTypes.Nationality), "Egyptian"));
             options.AddPolicy(PolicyNames.AtLeast20, policy =>
                 policy.Requirements.Add(new MinimumAgeRequirement(20)));
+            options.AddPolicy(PolicyNames.MultipleRestaurantCreated, policy => policy.AddRequirements(new MultipleRestaurantCreatedRequirement(2)));
         });
 
         services.AddIdentityApiEndpoints<User>()

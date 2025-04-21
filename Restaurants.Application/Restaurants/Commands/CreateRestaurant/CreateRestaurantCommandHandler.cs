@@ -17,5 +17,6 @@ public class CreateRestaurantCommandHandler(IRestaurantsRepository restaurantsRe
         var restaurantEntity = request.Adapt<Restaurant>();
         restaurantEntity.OwnerId = currentUser.Id;
         return await restaurantsRepository.AddRestaurant(restaurantEntity);
+        
     }
 }
