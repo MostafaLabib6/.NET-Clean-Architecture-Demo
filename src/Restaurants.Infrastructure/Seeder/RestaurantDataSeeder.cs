@@ -15,6 +15,11 @@ internal class RestaurantDataSeeder(RestaurantDbContext context) : IRestaurantDa
 {
     public async Task SeedAsync()
     {
+        if (context.Database.GetPendingMigrations().Any())
+        {
+            await context.Database.MigrateAsync();
+        }
+
         if (!await context.Restaurants.AnyAsync())
         {
             var restaurants = GetRestaurants();
@@ -31,7 +36,8 @@ internal class RestaurantDataSeeder(RestaurantDbContext context) : IRestaurantDa
                     Name = role.ToString(),
                     NormalizedName = role.ToString().ToUpper()
                 })
-                .ToList();;
+                .ToList();
+            ;
             context.Roles.AddRange(roles);
             await context.SaveChangesAsync();
         }
@@ -40,10 +46,15 @@ internal class RestaurantDataSeeder(RestaurantDbContext context) : IRestaurantDa
 
     private IEnumerable<Restaurant> GetRestaurants()
     {
+        var owner = new User()
+        {
+            Email = "seed-data@admin.com",
+        };
         List<Restaurant> restaurants =
         [
             new()
             {
+                Owner = owner,
                 Name = "KFC",
                 Category = "Fast Food",
                 Description =
@@ -76,6 +87,7 @@ internal class RestaurantDataSeeder(RestaurantDbContext context) : IRestaurantDa
             },
             new()
             {
+                Owner = owner,
                 Name = "McDonald",
                 Category = "Fast Food",
                 Description =
