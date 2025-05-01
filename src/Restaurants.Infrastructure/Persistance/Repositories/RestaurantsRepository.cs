@@ -44,7 +44,7 @@ internal class RestaurantsRepository(RestaurantDbContext dbContext) : IRestauran
 
     public async Task<Restaurant?> GetByIdAsync(int id)
     {
-        return await dbContext.Restaurants.AsNoTracking().Include(x => x.Dishes).FirstOrDefaultAsync(x => x.Id == id);
+        return await dbContext.Restaurants.Include(x => x.Dishes).FirstOrDefaultAsync(x => x.Id == id);
     }
 
     public async Task<int> AddRestaurant(Restaurant restaurant)
