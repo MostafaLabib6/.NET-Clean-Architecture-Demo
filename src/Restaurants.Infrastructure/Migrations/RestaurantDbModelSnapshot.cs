@@ -210,6 +210,9 @@ namespace Restaurants.Infrastructure.Migrations
                     b.Property<bool>("HasDelivery")
                         .HasColumnType("bit");
 
+                    b.Property<string>("LogoUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(256)

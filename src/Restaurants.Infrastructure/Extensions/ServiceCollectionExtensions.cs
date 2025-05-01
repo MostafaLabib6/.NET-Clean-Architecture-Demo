@@ -14,6 +14,8 @@ using Restaurants.Infrastructure.Authorization.Services;
 using Restaurants.Infrastructure.Persistance.Repositories;
 using Restaurants.Infrastructure.Persistence;
 using Restaurants.Infrastructure.Seeder;
+using Restaurants.Infrastructure.ServiceConfiguration;
+using Restaurants.Infrastructure.Storage;
 
 namespace Restaurants.Infrastructure.Extensions;
 
@@ -45,6 +47,8 @@ public static class ServiceCollectionExtensions
             .AddClaimsPrincipalFactory<RestaurantUserClaimsPrincipalFactory>()
             .AddEntityFrameworkStores<RestaurantDbContext>();
 
+        services.Configure<BlogStorageSettings>(configuration.GetSection("BlogStorageSettings"));
+        services.AddScoped<IBlobStorageService, BlogStorageService>();
         return services;
     }
 }

@@ -3,12 +3,13 @@ using MediatR;
 using Restaurants.Application.Restaurants;
 using Restaurants.Domain.Entities;
 using Restaurants.Domain.Exceptions;
+using Restaurants.Domain.Interfaces;
 using Restaurants.Domain.Repositories;
 using Serilog;
 
 namespace Restaurants.Application.Queries.GetrestaurantsById;
 
-public class GetRestaurantsByIdQueryHandler(IRestaurantsRepository restaurantsRepository, ILogger logger)
+public class GetRestaurantsByIdQueryHandler(IRestaurantsRepository restaurantsRepository, ILogger logger, IBlobStorageService blobStorageService)
     : IRequestHandler<GetRestaurantsByIdQuery, RestaurantDto>
 {
     public async Task<RestaurantDto> Handle(GetRestaurantsByIdQuery request, CancellationToken cancellationToken)
@@ -17,6 +18,8 @@ public class GetRestaurantsByIdQueryHandler(IRestaurantsRepository restaurantsRe
         var restaurant = await restaurantsRepository.GetByIdAsync(request.Id);
         if (restaurant is null)
             throw new NotFoundException(nameof(Restaurant), request.Id.ToString());
-        return restaurant.Adapt<RestaurantDto>();
+        var restaurantDto = restaurant.Adapt<RestaurantDto>();
+        restaurantDto.Logo = await blobStorageService.GetSaSToken(restaurant.LogoUrl);
+        return restaurantDto;
     }
 }

@@ -7,6 +7,7 @@ using Restaurants.Application.Commands.UpdateRestaurant;
 using Restaurants.Application.Queries.GetAllRestaurants;
 using Restaurants.Application.Queries.GetrestaurantsById;
 using Restaurants.Application.Restaurants;
+using Restaurants.Application.Restaurants.Commands.AddRestaurantLogo;
 using Restaurants.Domain.Constants;
 using Restaurants.Infrastructure.Authorization.Constants;
 
@@ -58,6 +59,18 @@ public class RestaurantsController(IMediator mediator) : ControllerBase
     {
         restaurantPatch.Id = id;
         await mediator.Send(restaurantPatch);
+        return NoContent();
+    }
+
+    [HttpPost("{id}/logo")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(statusCode: StatusCodes.Status404NotFound, Type = typeof(string))]
+    [ProducesResponseType(statusCode: StatusCodes.Status401Unauthorized, Type = typeof(string))]
+    public async Task<IActionResult> AddRestaurantLogo([FromRoute] int id, IFormFile file)
+    {
+        await using var stream = file.OpenReadStream();
+        var restaurant = new AddRestaurantLogoCommand(id, file.FileName, stream);
+        await mediator.Send(restaurant);
         return NoContent();
     }
 }
