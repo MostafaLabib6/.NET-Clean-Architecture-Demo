@@ -10,20 +10,15 @@ public static class WebApplicationBuilderExtensions
     {
         builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-        builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen(options =>
+        builder.Services.AddSwaggerGen(c =>
         {
-            options.AddSecurityDefinition("bearer", new OpenApiSecurityScheme
+            c.AddSecurityDefinition("bearerAuth", new OpenApiSecurityScheme
             {
-                Description =
-                    "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 12345abcdef\"",
-                Name = "Authorization",
-                In = ParameterLocation.Header,
                 Type = SecuritySchemeType.Http,
-                Scheme = "bearer"
+                Scheme = "Bearer"
             });
 
-            options.AddSecurityRequirement(new OpenApiSecurityRequirement
+            c.AddSecurityRequirement(new OpenApiSecurityRequirement
             {
                 {
                     new OpenApiSecurityScheme
@@ -35,6 +30,7 @@ public static class WebApplicationBuilderExtensions
             });
         });
 
+        builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddScoped<ErrorHandlerMiddleware>();
         builder.Services.AddScoped<RequestTimeLoggingMiddleware>();
         builder.Services.AddAuthentication();
